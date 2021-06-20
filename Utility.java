@@ -13,7 +13,7 @@ public class Utility {
         return sc.nextDouble();
     }
 
-            //Vending Machine//
+               //Vending Machine//
     static int[] notes = {1000, 500, 100, 50, 10, 5, 2, 1};
     static int total, i;
     static void note(int value)
@@ -38,8 +38,8 @@ public class Utility {
         note(value);
     }
 
-           //Day Of Week//
-
+                   //Day Of Week//
+ 
     public static int dayOfWeek(int d,int m,int y)
     {
 
@@ -51,4 +51,16 @@ public class Utility {
         return d0=(d+x+31*m0/12)%7;
 
     }
+                 // Monthly Payment//
+
+    public static double payment(double P, double Y, double R)
+    {
+        double n = 12 * Y;
+        double r = R / ( 12 * 100 );
+        double pay = P * r / ( 1 - Math.pow((1 + r), -n));
+        return pay;
+    }
+
+
+
 }
